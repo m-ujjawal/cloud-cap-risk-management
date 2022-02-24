@@ -6,7 +6,7 @@ pipeline {
             script: 'echo "clang"'
         )}"""
         EXIT_STATUS = """${sh(
-            returnStdout: true,
+            returnStatus: true,
             script: 'exit 1'
         )}"""
     }
