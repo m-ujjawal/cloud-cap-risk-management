@@ -11,6 +11,7 @@ pipeline {
                 returnStatus: true,
                 script: 'exit 1'
             )}"""
+            }
     stages {        
         stage('Build') {
             steps {
