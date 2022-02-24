@@ -1,12 +1,12 @@
 pipeline {     
     stages {
-        node('myagent'){
+        
         stage('Build') {
             steps {
                 echo 'Building...' 
             }
         }
-        }
+        
         stage('Test'){
             steps{
                 echo 'Testing...'
