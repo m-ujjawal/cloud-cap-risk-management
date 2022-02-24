@@ -1,11 +1,11 @@
 pipeline {  
     agent any
     environment{
-        CC = """${sh(
+        CC="""${sh(
             returnStdout: true,
             script: 'echo "clang"'
         )}"""
-        EXIT_STATUS = """${sh(
+        EXIT_STATUS="""${sh(
             returnStatus: true,
             script: 'exit 1'
         )}"""
