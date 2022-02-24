@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment{
         CC="""${sh(
-            returnStdout: false,
+            returnStdout: true,
             script: 'echo "clang"'
         )}"""
         EXIT_STATUS="""${sh(
@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."  
                 sh 'printenv'
+                echo "test... ${env.CC}"
             }
         }
         
