@@ -16,7 +16,8 @@ pipeline {
                 DEBUG_FLAGS = '-g'
             }
             steps {
-                echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."                 
+                echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."  
+                sh 'printenv'
             }
         }
         
