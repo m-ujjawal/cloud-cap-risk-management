@@ -12,6 +12,9 @@ pipeline {
     }
     stages {        
         stage('Build') {
+            environment {
+                DEBUG_FLAGS = '-g'
+            }
             steps {
                 echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."                 
             }
