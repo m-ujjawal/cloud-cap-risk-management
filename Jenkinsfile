@@ -1,10 +1,11 @@
-pipeline {
-    node('myagent'){ 
+pipeline {     
     stages {
+        node('myagent'){
         stage('Build') {
             steps {
                 echo 'Building...' 
             }
+        }
         }
         stage('Test'){
             steps{
@@ -17,5 +18,5 @@ pipeline {
             }
         }
     }
-    }
+    
 }
