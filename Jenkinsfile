@@ -14,6 +14,9 @@ pipeline {
         )}"""
         
     }
+    parameters {
+            string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
+     }
     stages {        
         stage('Build') {
             environment {
@@ -27,10 +30,7 @@ pipeline {
             }
         }
         
-        stage('Test'){
-            parameters {
-                    string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
-                }
+        stage('Test'){            
             steps{                
                 echo 'Testing...'
                 sh("echo ${STATEMENT}")
