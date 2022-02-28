@@ -20,6 +20,7 @@ pipeline {
             }
             steps {
                 echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."  
+                echo "credential AWS_ACCESS_KEY_ID is $(env.AWS_ACCESS_KEY_ID) "
                 sh 'printenv'
                 echo "test... ${env.CC}"
             }
