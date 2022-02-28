@@ -15,7 +15,7 @@ pipeline {
         
     }
     parameters {
-            string(name: 'STATEMNT', defaultValue: 'hello; ls /', description: 'What should I say?')
+            string(name: 'param-1', defaultValue: 'hello; ls /', description: 'What should I say?')
      }
     stages {        
         stage('Build') {
@@ -33,7 +33,7 @@ pipeline {
         stage('Test'){            
             steps{                
                 echo 'Testing...'
-                sh("echo ${STATEMNT}")
+                sh("echo ${param-1}")
             }
         }
         stage('Deploy'){
