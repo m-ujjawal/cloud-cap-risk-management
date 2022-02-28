@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."  
-                sh 'printenv'
+                
                 echo "test... ${env.CC}"
             }
         }
