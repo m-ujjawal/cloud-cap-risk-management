@@ -3,6 +3,7 @@ pipeline {
     environment{
         AWS_ACCESS_KEY_ID     = credentials('jenkins-aws-secret-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+        BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
         CC="""${sh(
             returnStdout: true,
             script: 'echo "clang"'
