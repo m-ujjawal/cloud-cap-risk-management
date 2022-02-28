@@ -9,8 +9,7 @@ pipeline {
             returnStatus: true,
             script: 'exit 1'
         )}"""
-        AWS_ACCESS_KEY_ID=credentials('jenkins-aws-secret-key-id')
-	AWS_SECRET_ACCESS_KEY=credentials('jenkins-aws-secret-access-key')
+        
     }
     stages {        
         stage('Build') {
@@ -19,7 +18,7 @@ pipeline {
             }
             steps {
                 echo "Building...${env.BUILD_ID} on ${env.JENKINS_URL}.."  
-                
+                sh 'printenv'
                 echo "test... ${env.CC}"
             }
         }
