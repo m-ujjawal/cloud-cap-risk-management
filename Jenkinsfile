@@ -28,10 +28,10 @@ pipeline {
         }
         
         stage('Test'){
-            steps{
-                parameters {
+            parameters {
                     string(name: 'STATEMENT', defaultValue: 'hello; ls /', description: 'What should I say?')
                 }
+            steps{                
                 echo 'Testing...'
                 sh("echo ${STATEMENT}")
             }
